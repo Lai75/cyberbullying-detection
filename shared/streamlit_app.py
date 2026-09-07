@@ -4,6 +4,12 @@ import datetime
 import pandas as pd
 import streamlit as st
 
+import nltk
+for resource in ['stopwords', 'punkt', 'punkt_tab', 'averaged_perceptron_tagger']:
+    try:
+        nltk.data.find(f'corpora/{resource}')
+    except LookupError:
+        nltk.download(resource, quiet=True)
 
 _this_dir = os.path.dirname(os.path.abspath(__file__))
 for _sub in ('lstm', 'svm', 'naive_bayes'):
