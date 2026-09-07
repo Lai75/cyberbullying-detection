@@ -1,18 +1,5 @@
 import re
 import numpy as np
-import nltk
-
-for _pkg, _path in [
-    ('stopwords', 'corpora/stopwords'),
-    ('punkt', 'tokenizers/punkt'),
-    ('punkt_tab', 'tokenizers/punkt_tab'),
-    ('wordnet', 'corpora/wordnet'),
-    ('omw-1.4', 'corpora/omw-1.4'),
-]:
-    try:
-        nltk.data.find(_path)
-    except LookupError:
-        nltk.download(_pkg, quiet=True)
 
 
 # ============================================
