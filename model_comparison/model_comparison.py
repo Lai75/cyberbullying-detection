@@ -137,8 +137,6 @@ print("\nSaved model_comparison_by_severity.csv, "
 
 # ============================================
 # 4. Charts (grouped bars, one group per category, one bar per model).
-# Consistent styling: bbox_inches='tight' on every savefig so long
-# labels/legends never get clipped 
 # ============================================
 MODEL_COLORS = {'SVM': '#4C72B0', 'LSTM': '#DD8452', 'Naive Bayes': '#55A868'}
 
