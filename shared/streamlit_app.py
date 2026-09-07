@@ -5,11 +5,11 @@ import pandas as pd
 import streamlit as st
 
 import nltk
-for resource in ['stopwords', 'punkt', 'punkt_tab', 'averaged_perceptron_tagger']:
+for res in ['stopwords', 'wordnet', 'omw-1.4', 'averaged_perceptron_tagger', 'punkt']:
     try:
-        nltk.data.find(f'corpora/{resource}')
+        nltk.data.find(f'corpora/{res}')
     except LookupError:
-        nltk.download(resource, quiet=True)
+        nltk.download(res, quiet=True)
 
 _this_dir = os.path.dirname(os.path.abspath(__file__))
 for _sub in ('lstm', 'svm', 'naive_bayes'):
